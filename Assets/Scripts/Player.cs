@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
 
     private Quaternion rotation;
     public Rigidbody2D rb;
+    private bool isExploding = false;
 
     private void Awake()
     {
@@ -30,6 +31,12 @@ public class Player : MonoBehaviour
     void Update()
     {
         move();
+
+        if (this.transform.position.y < -5 && !isExploding)
+        {
+            isExploding = true;
+            deactivate();
+        }
     }
 
     private void OnEnable()
@@ -83,7 +90,8 @@ public class Player : MonoBehaviour
         this.rocketSprite.SetActive(false);
         yield return new WaitForSeconds(0.75f);
         this.gameObject.SetActive(false);
-        //GameObject gameController = GameObject.FindGameObjectWithTag("GameController");
-        //gameController.GetComponent<GameController>().stopGame();
+        isExploding = false;
+        GameObject gameController = GameObject.FindGameObjectWithTag("GameController");
+        gameController.GetComponent<GameController>().stopGame();
     }
 }
