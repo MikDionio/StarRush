@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strength: 70
-  rotateSpeed: 0.03
+  rotateSpeed: 0.012
   moveSpeed: 10
   rocketSprite: {fileID: 518683298076787872}
   explosion_effect: {fileID: 0}

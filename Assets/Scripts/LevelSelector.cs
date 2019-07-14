@@ -32,6 +32,11 @@ public class LevelSelector : MonoBehaviour
         SceneManager.LoadScene("Level2");
     }
 
+    public void loadLevelThree()
+    {
+        SceneManager.LoadScene("Level3");
+    }
+
     public void loadNextLevel()
     {
         SceneManager.LoadScene(currentScene.buildIndex + 1);

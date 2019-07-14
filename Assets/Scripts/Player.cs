@@ -32,11 +32,11 @@ public class Player : MonoBehaviour
     {
         move();
 
-        if (this.transform.position.y < -5 && !isExploding)
+        /*if (this.transform.position.y < -5 && !isExploding)
         {
             isExploding = true;
             deactivate();
-        }
+        }*/
     }
 
     private void OnEnable()
@@ -59,13 +59,13 @@ public class Player : MonoBehaviour
             //rb.AddForce(new Vector2(0.0f, strength));
 
             //Update rotation
-            rotation = Quaternion.Euler(Vector3.Lerp(this.transform.eulerAngles, new Vector3(0.0f,0.0f,360.0f), rotateSpeed));
+            rotation = Quaternion.Euler(Vector3.Lerp(this.transform.eulerAngles, new Vector3(0.0f,0.0f,540.0f), rotateSpeed));
             this.transform.SetPositionAndRotation(this.transform.position, rotation);
         }
         else
         {
             //Update rotation
-            rotation = Quaternion.Euler(Vector3.Lerp(this.transform.eulerAngles, new Vector3(0.0f, 0.0f, 180.0f), rotateSpeed));
+            rotation = Quaternion.Euler(Vector3.Lerp(this.transform.eulerAngles, new Vector3(0.0f, 0.0f, 0.0f), rotateSpeed));
         }
 
         this.transform.SetPositionAndRotation(this.transform.position, rotation);
@@ -78,13 +78,16 @@ public class Player : MonoBehaviour
 
     public void deactivate()
     {
+        explosion_effect.transform.position = this.transform.position;
+        thruster_flame.SetActive(false);
+        thruster_smoke.SetActive(false);
         StartCoroutine("explode");
         //this.gameObject.SetActive(false);
     }
 
     IEnumerator explode()
     {
-        explosion_effect.transform.position = this.transform.position;
+        
         explosion_effect.Play();
         explosion_sound.Play();
         this.rocketSprite.SetActive(false);
