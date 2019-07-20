@@ -12,6 +12,11 @@ public class LevelSelector : MonoBehaviour
         currentScene = SceneManager.GetActiveScene();
     }
 
+    public void quitGame()
+    {
+        Application.Quit();
+    }
+
     public void reloadScene()
     {
         SceneManager.LoadScene(currentScene.name);

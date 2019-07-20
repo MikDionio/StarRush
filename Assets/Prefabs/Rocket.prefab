@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strength: 70
-  rotateSpeed: 0.012
+  rotateSpeed: 3.5
   moveSpeed: 10
   rocketSprite: {fileID: 518683298076787872}
   explosion_effect: {fileID: 0}
@@ -175,7 +175,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.7, y: 1.8}
+  m_Size: {x: 0.5, y: 1.8}
   m_Direction: 0
 --- !u!1 &518683298590712510
 GameObject:

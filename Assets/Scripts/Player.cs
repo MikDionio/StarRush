@@ -59,13 +59,21 @@ public class Player : MonoBehaviour
             //rb.AddForce(new Vector2(0.0f, strength));
 
             //Update rotation
-            rotation = Quaternion.Euler(Vector3.Lerp(this.transform.eulerAngles, new Vector3(0.0f,0.0f,540.0f), rotateSpeed));
-            this.transform.SetPositionAndRotation(this.transform.position, rotation);
+            //rotation = Quaternion.Euler(Vector3.Lerp(this.transform.eulerAngles, new Vector3(0.0f,0.0f,540.0f), rotateSpeed));
+            if(this.transform.rotation.eulerAngles.z < 540f)
+            {
+                rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, this.transform.rotation.eulerAngles.z + rotateSpeed));
+            }
         }
         else
         {
             //Update rotation
-            rotation = Quaternion.Euler(Vector3.Lerp(this.transform.eulerAngles, new Vector3(0.0f, 0.0f, 0.0f), rotateSpeed));
+            //rotation = Quaternion.Euler(Vector3.Lerp(this.transform.eulerAngles, new Vector3(0.0f, 0.0f, 0.0f), rotateSpeed));
+            /*if (this.transform.rotation.eulerAngles.z >= 0f)
+            {
+                rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, this.transform.rotation.eulerAngles.z - rotateSpeed));
+            }*/
+            rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, this.transform.rotation.eulerAngles.z - rotateSpeed));
         }
 
         this.transform.SetPositionAndRotation(this.transform.position, rotation);
