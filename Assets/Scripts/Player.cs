@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
         {
             //Update force
             //rb.AddForce(new Vector2(0.0f, strength));
-
+            Debug.Log("Up");
             //Update rotation
             //rotation = Quaternion.Euler(Vector3.Lerp(this.transform.eulerAngles, new Vector3(0.0f,0.0f,540.0f), rotateSpeed));
             if(this.transform.rotation.eulerAngles.z < 540f)
@@ -95,7 +95,6 @@ public class Player : MonoBehaviour
 
     IEnumerator explode()
     {
-        
         explosion_effect.Play();
         explosion_sound.Play();
         this.rocketSprite.SetActive(false);

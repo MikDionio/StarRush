@@ -15,17 +15,17 @@ public class GameController : MonoBehaviour
     
     [SerializeField] private GameObject restartCanvas;*/
 
-    [SerializeField] private float scoreRate;
+    [SerializeField] public float scoreRate;
 
     //UI Elements
     [SerializeField] private Canvas restartCanvas;
     [SerializeField] private Canvas winCanvas;
-    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] public TextMeshProUGUI scoreText;
     [SerializeField] private GameObject startText;
 
-    private float score;
+    public float score;
     private float totalCoins;
-    private bool hasStarted;
+    public bool hasStarted;
 
     private List<GameObject> debrisPool = new List<GameObject>();
 
@@ -135,7 +135,7 @@ public class GameController : MonoBehaviour
         totalCoins = GameObject.FindGameObjectsWithTag("Coin").Length;
     }
 
-    public void updateScore()
+    public virtual void updateScore()
     {
         score = score + scoreRate;
         scoreText.text = "Score: " + score + "/" + totalCoins;
