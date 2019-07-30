@@ -356,11 +356,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 356012688}
     - target: {fileID: 845971230138583954, guid: e4b5eae63209bd545aa34a4fee15c96c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: loadMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 845971231928685748, guid: e4b5eae63209bd545aa34a4fee15c96c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4b5eae63209bd545aa34a4fee15c96c, type: 3}
@@ -603,6 +608,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rocket
+      objectReference: {fileID: 0}
+    - target: {fileID: 518683297654014432, guid: 2b743c40d59ec7841ab8134dc79c3050,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 518683297654014447, guid: 2b743c40d59ec7841ab8134dc79c3050,
         type: 3}

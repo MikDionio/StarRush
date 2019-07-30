@@ -42,6 +42,11 @@ public class LevelSelector : MonoBehaviour
         SceneManager.LoadScene("Level3");
     }
 
+    public void loadEndless()
+    {
+        SceneManager.LoadScene("Endless");
+    }
+
     public void loadNextLevel()
     {
         SceneManager.LoadScene(currentScene.buildIndex + 1);

@@ -184,6 +184,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 1514819018549289171, guid: 553e60fc55490c24dad293a28261ebc0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 553e60fc55490c24dad293a28261ebc0, type: 3}
 --- !u!1001 &980269316
@@ -346,6 +351,11 @@ PrefabInstance:
         type: 3}
       propertyPath: moveSpeed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 518683297654014445, guid: 2b743c40d59ec7841ab8134dc79c3050,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b743c40d59ec7841ab8134dc79c3050, type: 3}
